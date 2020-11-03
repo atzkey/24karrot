@@ -1,0 +1,33 @@
+{
+	"name": "24karrot",
+	"version": "0.0.1",
+	"description": "PURE GLOD.",
+	"homepage_url": "https://github.com/atzkey/24karrot",
+	"manifest_version": 2,
+	"minimum_chrome_version": "74",
+	"applications": {
+		"gecko": {
+			"id": "24karrot@atzkey.github.io",
+			"strict_min_version": "64.0"
+		}
+	},
+	"icons": {
+		"128": "icon.png"
+	},
+	"permissions": [
+		"storage"
+	],
+	"options_ui": {
+		"chrome_style": true,
+		"page": "options.html"
+	},
+	"background": {
+		"persistent": false,
+		"scripts": [
+			"browser-polyfill.min.js",
+			"background.js"
+		]
+	},
+  	"browser_action": {
+	}
+}
