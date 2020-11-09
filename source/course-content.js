@@ -2,8 +2,6 @@ import optionsStorage from './options-storage';
 
 const courseNameRe = /\/learn\/uol-([^\/]+)\//;
 
-console.log('content loaded', this, window);
-
 function recordCourseHistoryChange() {
     const url = window.location.href;
     const match = url.match(courseNameRe);
@@ -12,7 +10,6 @@ function recordCourseHistoryChange() {
 
     if (course) {
         optionsStorage.getAll().then(({courseHistory}) => {
-            console.log(courseHistory);
             let courseVisit = courseHistory[course] || {};
             courseHistory[course] = {...courseVisit, ts, url}
             optionsStorage.set({courseHistory});
