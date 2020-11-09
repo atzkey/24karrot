@@ -7,8 +7,10 @@ module.exports = {
 	devtool: 'source-map',
 	stats: 'errors-only',
 	entry: {
-		background: './source/background',
-		options: './source/options'
+		'background': './source/background',
+		'options': './source/options',
+        'course-content': './source/course-content',
+        'popup/main': './source/popup/main'
 	},
 	output: {
 		path: path.join(__dirname, 'distribution'),

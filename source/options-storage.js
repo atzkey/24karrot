@@ -4,7 +4,9 @@ export default new OptionsSync({
 	defaults: {
 		colorRed: 244,
 		colorGreen: 67,
-		colorBlue: 54
+		colorBlue: 54,
+        maxRecentCourses: 6,
+        courseHistory: {},
 	},
 	migrations: [
 		OptionsSync.migrations.removeUnused
