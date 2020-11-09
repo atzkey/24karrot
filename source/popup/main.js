@@ -27,7 +27,8 @@ optionsStorage.getAll().then(({maxRecentCouses: maxRecentCourses, courseHistory}
             $courseLink.innerText = c;
             $courseLink.href = _lastUrl(c);
             $courseLink.className = 'text';
-            $courseLink.addEventListener('click', () => {
+            $courseLink.addEventListener('click', (e) => {
+                e.preventDefault();
                 browser.tabs.query({currentWindow: true, active: true}).then(([tab,,]) => {
                     browser.tabs.update(tab.id, {url: _lastUrl(c)});
                 });
